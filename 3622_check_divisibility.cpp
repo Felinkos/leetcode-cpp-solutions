@@ -1,0 +1,1 @@
+class Solution { public: bool checkDivisibility(int n) { int temp = n; int digit_sum = 0; int digit_product = 1; while (temp > 0) { int last_digit = temp % 10; digit_sum = digit_sum + last_digit; digit_product = digit_product * last_digit; temp = temp / 10; } int total = digit_sum + digit_product; return (n % total == 0); } };
